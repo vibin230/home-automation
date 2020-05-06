@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Home Automation</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body class="page">
+    <div>
+      <nav class="nav">
+        <button class="setting-button" onclick="toggleSettings()">
+          Setting
+        </button>
+        <button class="live-button" onclick="toggleLiveReport()">
+          Live Report
+        </button>
+      </nav>
+      <div class="status-container">
+        Status
+        <span id="light_1_status">
+          Light-1 : off
+        </span>
+        <span id="light_2_status">
+          Light-2 : off
+        </span>
+        <span id="tv_status">
+          Tv : off
+        </span>
+      </div>
+      <div class="live-container" id="liveReport">
+        Power consumption:
+        <span> Power consumed:<span id="power">0</span> </span>
+      </div>
+      <div class="setting-container" id="settings">
+        <span>
+          Toggle light and TV by clicking on checkbox
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="light1"
+            name="light1"
+            value="Light"
+            onclick="lightone(); displayPower()"
+          />
+          <label for="light1"> Light one</label>
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="light2"
+            name="light2"
+            value="Light"
+            onclick="lighttwo(); displayPower()"
+          />
+
+          <label for="light2"> Light two</label>
+        </span>
+        <span>
+          <input
+            type="checkbox"
+            id="tv"
+            name="tv"
+            value="Light"
+            onclick="tvON_OFF(); displayPower()"
+          />
+          <label for="tv"> TV</label>
+        </span>
+      </div>
+    </div>
+    <script src="index.js"></script>
+  </body>
+</html>
